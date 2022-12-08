@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Okpeku Vincent</title>
+ <link rel="stylesheet" href="style.css">
+ <script src="https://kit.fontawesome.com/26a50bdc34.js" crossorigin="anonymous"></script>
+ <script src="index.js"></script>
+ <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("naa7_XyVRZvY_MaSe");
+   })(); 
+</script>
+</head>
+<body>
+<section id="landing-page" onmousemove="moveBackground(event)">
+  <nav>
+   <figure>
+    <img id="personal-logo" src="./assets/logo.svg" alt="">
+   </figure>
+   <ul class="nav__link--list">
+    <li class="nav__link">
+     <a href="#" class="nav__link--anchor link__hover-effect link__hover-effect--black">About</a>
+    </li>
+    <li class="nav__link">
+     <a href="#" class="nav__link--anchor link__hover-effect link__hover-effect--black">Projects</a>
+    </li>
+    <li class="nav__link" onclick="toggleModal()">
+     <a href="#" class="nav__link--anchor link__hover-effect link__hover-effect--black">Contact</a>
+    </li>
+    <li class="nav__link click" onclick="toggleContrast()">
+     <i class="fa-sharp fa-solid fa-circle-half-stroke"></i>
+    </li>
+   </ul>
+  </nav>
+  <header class="header">
+   <div class="header__content">
+    <h1 class="title">Hey</h1>
+    <h1 class="sub-title orange">I'm Vincent.</h1>
+    <p class="header__para">I'm a <b class="orange">Frontend Software Engineer</b> with a strong passion for building web applications with great user experiences. <br> Here's a bit more <b class="orange click" onclick="toggleModal()">about me.</b></p>
+    <div class="social__list">
+     <a href="" class="social__link click">
+      <i class="fa-brands fa-linkedin-in"></i>
+     </a>
+     <a href="" class="social__link click">
+      <i class="fa-brands fa-github"></i>
+     </a>
+     <a href="" class="social__link click" target="_blank">
+      <i class="fa-solid fa-file-pdf"></i>
+     </a>
+    </div>
+   </div>
+  </header>
+  <a href="#">
+     <button class="mail__btn click" onclick="toggleModal()">
+     <i class="fa-solid fa-envelope"></i>
+    </button>
+  </a>
+  <a href="#projects" class="scroll">
+   <div class="scroll__icon click">
+   </div>
+  </a>
+  <div class="modal">
+   <div class="modal__half modal__about">
+    <h3 class="modal__title">
+     Here's a bit about me.
+    </h3>
+    <h4 class="modal__sub-title modal__sub-title--about">
+    Frontend Software Engineer
+    </h4>
+    <p class="modal__para">
+     I'm a 17 year-old South African <b class="orange">frontend software engineer</b> with a strong passion for developing websites with great <b class="orange">user experiences.</b>
+     <br>
+     I currently solve extremely difficult engineering problems and learn from a team consisting of some of the most <b class="orange">talented</b> and <b class="orange">experienced </b> software engineers every day.
+    </p>
+    <div class="modal__languages">
+      <figure class="modal__language">
+        <img class="modal__language--img" src="./assets/HTML.png" alt="">
+        <div class="span language__name">HTML</div>
+      </figure>
+      <figure class="modal__language">
+        <img class="modal__language--img" src="./assets/CSS.png" alt="">
+        <div class="span language__name">CSS</div>
+      </figure>
+      <figure class="modal__language">
+        <img class="modal__language--img" src="./assets/JS.png" alt="">
+        <div class="span language__name">Javascript</div>
+      </figure>
+      <figure class="modal__language">
+        <img class="modal__language--img" src="./assets/REACT.png" alt="">
+        <div class="span language__name">React</div>
+      </figure>
+    </div>
+   </div>
+   <div class="modal__half modal__contact">
+    <i class="fa-solid fa-xmark modal__exit click" onclick="toggleModal()"></i>
+    <h3 class="modal__title modal__title--contact">
+      Let's have a chat!
+    </h3>
+    <h3 class="modal__sub-title modal__sub-title--contact">
+      I'm currently open to new oppurtunities.
+    </h3>
+    <form id="contact__form" onsubmit="contact(event)">
+      <div class="form__item">
+        <label class="form__item--label">Name</label>
+        <input class="input" name="user_name" type="text"></input>
+      </div>
+      <div class="form__item">
+        <label class="form__item--label">Email</label>
+        <input class="input" name="user_email" type="text" required></input>
+      </div>
+      <div class="form__item">
+        <label class="form__item--label">Message</label>
+        <textarea class="input" name="message" type="text" required> </textarea>
+      </div>
+      <button id="contact__submit" class="form__submit">
+        Send it my way
+      </button>
+    </form>
+    <div class="modal__overlay modal__overlay--loading">
+      <i class="fa-solid fa-spinner"></i>
+    </div>
+    <div class="modal__overlay modal__overlay--success">
+      Thanks for the message! Look forward to speaking to you soon.
+    </div>
+   </div>
+  </div>
+  <img src="./assets/semi circle.svg" class="shape shape--0">
+  <img src="./assets/circle.svg" class="shape shape--1">
+  <img src="./assets/squiggly.svg" class="shape shape--2">
+  <img src="./assets/circle.svg" class="shape shape--3">
+  <img src="./assets/triangle.svg" class="shape shape--4">
+  <img src="./assets/circle.svg" class="shape shape--5">
+  <img src="./assets/squiggly.svg" class="shape shape--6">
+  <img src="./assets/circle.svg" class="shape shape--7">
+  <img src="./assets/semi circle.svg" class="shape shape--8">
+ </section>
+ <section id="projects">
+  <div class="container">
+   <div class="row">
+    <h1 class="section__title">
+     Here are some of my <span class="orange">projects</span>
+    </h1>
+    <ul class="project__list">
+     <li class="projects">
+      <div class="project__wrapper">
+       <img src="./assets/Treact.PNG" class="project__img" alt="">
+       <div class="project__wrapper--bg"></div>
+       <div class="project__description">
+        <h3 class="project__description--title">
+         Treact Project
+        </h3>
+        <h4 class="project__description--sub-title">
+         HTML, CSS, Javascript
+        </h4>
+        <p class="project__description--para">
+         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi iure asperiores repellat. Iste, alias, vitae culpa nemo nesciunt inventore nobis itaque quo repellendus nihil unde ducimus! Laboriosam ex, nam magnam quae voluptate ratione optio ad, aliquam, in assumenda ipsam nostrum.
+        </p>
+        <div class="project__description--links">
+         <a href="https://github.com/Traurorous/Treact-project" class="project__description--link" target="_blank">
+          <i class="fa-brands fa-github"></i>
+         </a>
+         <a href="https://traurorous.github.io/Treact-project/" class="project__description--link" target="_blank">
+          <i class="fa-solid fa-link"></i>
+         </a>
+        </div>
+       </div>
+      </div>
+     </li>
+     <li class="projects">
+        <div class="project__wrapper">
+         <img src="./assets/Mockup Portfolio.PNG" class="project__img" alt="">
+         <div class="project__wrapper--bg"></div>
+         <div class="project__description">
+          <h3 class="project__description--title">
+           E-portfolio Project
+          </h3>
+          <h4 class="project__description--sub-title">
+           HTML, CSS.
+          </h4>
+          <p class="project__description--para">
+           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi iure asperiores repellat. Iste, alias, vitae culpa nemo nesciunt inventore nobis itaque quo repellendus nihil unde ducimus! Laboriosam ex, nam magnam quae voluptate ratione optio ad, aliquam, in assumenda ipsam nostrum.
+          </p>
+          <div class="project__description--links">
+           <a href="https://github.com/Traurorous/deployable-portfolio" class="project__description--link" target="_blank">
+            <i class="fa-brands fa-github"></i>
+           </a>
+           <a href="https://traurorous.github.io/deployable-portfolio/" class="project__description--link" target="_blank">
+            <i class="fa-solid fa-link"></i>
+           </a>
+          </div>
+         </div>
+        </div>
+       </li>
+       <li class="projects">
+        <div class="project__wrapper">
+         <img src="./assets/Library.PNG" class="project__img" alt="">
+         <div class="project__wrapper--bg"></div>
+         <div class="project__description">
+          <h3 class="project__description--title">
+           E-commerce Project
+          </h3>
+          <h4 class="project__description--sub-title">
+           HTML, CSS, Javascript
+          </h4>
+          <p class="project__description--para">
+           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi iure asperiores repellat. Iste, alias, vitae culpa nemo nesciunt inventore nobis itaque quo repellendus nihil unde ducimus! Laboriosam ex, nam magnam quae voluptate ratione optio ad, aliquam, in assumenda ipsam nostrum.
+          </p>
+          <div class="project__description--links">
+           <a href="https://github.com/Traurorous/E-commerce-website-without-javascript" class="project__description--link" target="_blank">
+            <i class="fa-brands fa-github"></i>
+           </a>
+           <a href="https://traurorous.github.io/E-commerce-website-without-javascript/" class="project__description--link" target="_blank">
+            <i class="fa-solid fa-link"></i>
+           </a>
+          </div>
+         </div>
+        </div>
+       </li>
+    </ul>
+   </div>
+  </div>
+ </section>
+ <footer>
+  <div class="container">
+   <div class="row footer__row">
+    <figure>
+     <img src="./assets/logo.svg" class="footer__logo--img" alt="">
+    </figure>
+    <div class="footer__social--list">
+     <a href="https://github.com/Traurorous" class="footer__social--link link__hover-effect link__hover-effect--white" target="_blank"> 
+      Github
+     </a>
+     <a href="https://www.linkedin.com/in/vincent-okpeku-177a1b254/" class="footer__social--link link__hover-effect link__hover-effect--white" target="_blank"> 
+      LinkedIn
+     </a>
+     <a href="" onclick="toggleModal()" class="footer__social--link link__hover-effect link__hover-effect--white" target="_blank"> 
+      Email
+     </a>
+     <a href="./assets/David Bragg Resume.pdf" class="footer__social--link link__hover-effect link__hover-effect--white" target="_blank"> 
+      Resume
+     </a>
+    </div>
+    <div class="footer__copyright">
+     Copyright &COPY; 2022 Okpeku Vincent
+     </a> 
+    </div>
+   </div>
+   </div>
+ </footer>
+</body>
+</html>
